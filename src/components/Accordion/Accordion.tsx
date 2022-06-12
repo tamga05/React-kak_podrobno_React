@@ -14,12 +14,14 @@ function Accordion(props: AccordionPropsType) {
                 <AccordionTitle titleValueNext={props.titleValue}/>
             </div>
         );
-    } else return (
-        <div>
-            <AccordionTitle titleValueNext={props.titleValue}/>
-            <AccordionBody/>
-        </div>
-    );
+    } else {
+        return (
+            <div>
+                <AccordionTitle titleValueNext={props.titleValue}/>
+                <AccordionBody/>
+            </div>
+        );
+    }
 }
 
 
