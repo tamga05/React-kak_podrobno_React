@@ -7,13 +7,13 @@ import {Rating} from './components/Rating/Rating';
 function App() {
     return (
         <div className="App">
-            <img src={'https://99px.ru/sstorage/53/2016/02/tmb_158067_5866.jpg'} alt="parrot"/>
+            {/*<img src={'https://99px.ru/sstorage/53/2016/02/tmb_158067_5866.jpg'} alt="parrot"/>*/}
             <PageTitle title={'This is App component'}/>
             <PageTitle title={'My friends'}/>
             Article 1
             <Rating value={1}/>
-            <Accordion title={'List 1'}/>
-            <Accordion title={'List 2'}/>
+            <Accordion titleValue={'Menu'} collapsed={true}/>
+            <Accordion titleValue={'Users'} collapsed={false}/>
             Article 2
             <Rating value={0}/>
             <Rating value={1}/>
