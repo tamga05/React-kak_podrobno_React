@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
-import OnOff from './components/OnOff/OnOff';
+import OnOffWithoutUseState from './components/OnOff/OnOffWithoutUseState';
+import OnOffWithUseState from './components/OnOff/OnOffWithUseState';
 
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
-            <OnOff off={false} switch={true}/>
+            <OnOffWithoutUseState off={false} switch={true}/>
+            <OnOffWithUseState/>
+            <OnOffWithUseState/>
+            {/*<OnOffWithUseState on={true}/>*/}
         </div>
     );
 }
@@ -31,6 +35,7 @@ function App() {
 type PageTitlePropsType = {
     title: string
 }
+
 
 function PageTitle(props: PageTitlePropsType) {
     return (
