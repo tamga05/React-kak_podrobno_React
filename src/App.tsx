@@ -5,6 +5,7 @@ import {Rating} from './components/Rating/Rating';
 import OnOffWithoutUseState from './components/OnOff/OnOffWithoutUseState';
 import OnOffWithUseState from './components/OnOff/OnOffWithUseState';
 import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
+import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             {/*<OnOffWithUseState on={true}/>*/}
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledAccordion titleValue={'Users'}/>
+            <UncontrolledRating/>
         </div>
     );
 }

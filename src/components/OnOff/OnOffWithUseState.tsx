@@ -10,7 +10,7 @@ type OnOffWithUseStatePropsType = {
 const OnOffWithUseState = (props: OnOffWithUseStatePropsType) => {
 
 
-    let [on, setOn] = useState(false);
+    let [on, setOn] = useState(true);
 
 
     const onStyle = {
