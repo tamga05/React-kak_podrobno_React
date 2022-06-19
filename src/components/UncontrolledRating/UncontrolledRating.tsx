@@ -15,6 +15,7 @@ export function UncontrolledRating() {
     return (
         <div>
             <br/>
+
             <Star selected={value >= 1}/>
             <button onClick={() => {
                 setValue(1);
@@ -40,10 +41,13 @@ export function UncontrolledRating() {
                 setValue(5);
             }}>5
             </button>
+
+
             <button onClick={() => {
                 setValue(0);
             }} style={resetStyle}>Reset
             </button>
+
             <br/>
         </div>
     );
@@ -55,9 +59,12 @@ type StarPropsType = {
 }
 
 function Star(props: StarPropsType) {
-    if (props.selected) {
-        return <span> <b>star</b> </span>;
-    } else {
-        return <span> star </span>;
-    }
+
+    // if (props.selected) {
+    //     return <span> <b>star</b> </span>;
+    // } else {
+    //     return <span> star </span>;
+    // }
+
+    return (props.selected ? <span> <b>star</b> </span> : <span> star </span>);
 }
