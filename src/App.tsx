@@ -9,6 +9,13 @@ import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRa
 
 
 function App() {
+
+
+    const callBackHello = () => {
+        alert('Hello, Andrey !!!');
+    };
+
+
     return (
 
         <div className={'.App'}>
@@ -21,6 +28,7 @@ function App() {
                 <Accordion titleValue={'Menu'} collapsed={true}/>
                 <Accordion titleValue={'Users'} collapsed={false}/>
                 {/*Article 2*/}
+                <h4>5. Условный рендеринг</h4>
                 <Rating value={0}/>
                 <Rating value={1}/>
                 <Rating value={2}/>
@@ -33,7 +41,7 @@ function App() {
                 {/*<OnOffWithUseState on={true}/>*/}
                 <UncontrolledAccordion titleValue={'Menu'}/>
                 {/*<UncontrolledAccordion titleValue={'Users'}/>*/}
-                <UncontrolledRating/>
+                <UncontrolledRating callBack={callBackHello}/>
             </div>
         </div>
     );

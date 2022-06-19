@@ -1,10 +1,20 @@
 import React, {useState} from 'react';
 
 
-export function UncontrolledRating() {
+type callBackPropsType = {
+    callBack: () => void
+}
+
+
+export function UncontrolledRating(props: callBackPropsType) {
 
 
     let [value, setValue] = useState(0);
+
+
+    const callBackGoodbye = () => {
+        alert('Goodbye, Andrey !!!');
+    };
 
 
     const resetStyle = {
@@ -48,6 +58,13 @@ export function UncontrolledRating() {
             }} style={resetStyle}>Reset
             </button>
 
+            <br/>
+            <br/>
+            <h4>6. callback, onClick, onChange, onBlur</h4>
+
+            <button onClick={props.callBack}>Hello</button>
+            <button onClick={callBackGoodbye} style={resetStyle}>Goodbye</button>
+            <br/>
             <br/>
         </div>
     );
