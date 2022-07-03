@@ -6,14 +6,15 @@ import OnOffWithoutUseState from './components/OnOff/OnOffWithoutUseState';
 import OnOffWithUseState from './components/OnOff/OnOffWithUseState';
 import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
+import {UncontrolledRating2} from './components/UncontrolledRating/UncontrolledRating2';
+import UncontrolledAccordion2 from './components/UncontrolledAccordion/UncontrolledAccordion2';
 
 
 function App() {
 
-
     const callBackHello = () => {
-        alert('Hello, Andrey !!!');
-    };
+        alert('Hello, Andrey !!!')
+    }
 
 
     return (
@@ -42,9 +43,11 @@ function App() {
                 <UncontrolledAccordion titleValue={'Menu'}/>
                 {/*<UncontrolledAccordion titleValue={'Users'}/>*/}
                 <UncontrolledRating callBack={callBackHello}/>
+                <UncontrolledRating2/>
+                <UncontrolledAccordion2 titleValue={'Menu'}/>
             </div>
         </div>
-    );
+    )
 }
 
 
@@ -58,7 +61,7 @@ function PageTitle(props: PageTitlePropsType) {
         <h1>
             {props.title}
         </h1>
-    );
+    )
 }
 
 

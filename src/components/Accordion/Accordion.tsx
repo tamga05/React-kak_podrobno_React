@@ -15,7 +15,7 @@ function Accordion(props: AccordionPropsType) {
             <AccordionTitle titleValueNext={props.titleValue}/>
             {!props.collapsed && <AccordionBody/>}
         </div>
-    );
+    )
 }
 
 

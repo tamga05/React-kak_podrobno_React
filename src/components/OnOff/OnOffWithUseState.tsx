@@ -2,12 +2,7 @@ import React, {useState} from 'react';
 import s from './OnOffWithoutUseState.module.css';
 
 
-type OnOffWithUseStatePropsType = {
-    //on: boolean
-}
-
-
-const OnOffWithUseState = (props: OnOffWithUseStatePropsType) => {
+const OnOffWithUseState = () => {
 
 
     let [on, setOn] = useState(true);
