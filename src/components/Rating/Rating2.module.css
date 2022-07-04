@@ -5,3 +5,8 @@
     justify-content: center;
     gap: 10px;
 }
+
+.star {
+    cursor: pointer;
+    margin-bottom: -10px;
+}

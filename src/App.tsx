@@ -10,6 +10,7 @@ import {UncontrolledRating2} from './components/UncontrolledRating/UncontrolledR
 import UncontrolledAccordion2 from './components/UncontrolledAccordion/UncontrolledAccordion2';
 import {Rating2, RatingValueType} from './components/Rating/Rating2';
 import {UncontrolledRating3} from './components/UncontrolledRating/UncontrolledRating3';
+import Accordion2 from './components/Accordion/Accordion2';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
 
 
     let [rating2Value, setRating2Value] = useState<RatingValueType>(0)
+
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
 
 
     return (
@@ -52,6 +55,7 @@ function App() {
                 <UncontrolledAccordion2 titleValue={'Menu'}/>
                 <Rating2 value={rating2Value} onClick={setRating2Value}/>
                 <UncontrolledRating3/>
+                <Accordion2 titleValue={'Menu'} value={accordionCollapsed} onClick={setAccordionCollapsed}/>
             </div>
         </div>
     )

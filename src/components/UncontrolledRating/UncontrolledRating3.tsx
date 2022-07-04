@@ -14,7 +14,7 @@ export function UncontrolledRating3() {
 
 
     return (
-        <div className={s.wrapper3}>
+        <div>
             <h4>10. callback, onClick at UncontrolledRating3 component</h4>
 
             <div className={s.starBlock}>
