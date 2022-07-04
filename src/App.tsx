@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
@@ -8,6 +8,8 @@ import UncontrolledAccordion from './components/UncontrolledAccordion/Uncontroll
 import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
 import {UncontrolledRating2} from './components/UncontrolledRating/UncontrolledRating2';
 import UncontrolledAccordion2 from './components/UncontrolledAccordion/UncontrolledAccordion2';
+import {Rating2, RatingValueType} from './components/Rating/Rating2';
+import {UncontrolledRating3} from './components/UncontrolledRating/UncontrolledRating3';
 
 
 function App() {
@@ -15,6 +17,9 @@ function App() {
     const callBackHello = () => {
         alert('Hello, Andrey !!!')
     }
+
+
+    let [rating2Value, setRating2Value] = useState<RatingValueType>(0)
 
 
     return (
@@ -45,6 +50,8 @@ function App() {
                 <UncontrolledRating callBack={callBackHello}/>
                 <UncontrolledRating2/>
                 <UncontrolledAccordion2 titleValue={'Menu'}/>
+                <Rating2 value={rating2Value} onClick={setRating2Value}/>
+                <UncontrolledRating3/>
             </div>
         </div>
     )

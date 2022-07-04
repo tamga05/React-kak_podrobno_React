@@ -2,12 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .title {
+    margin-top: -5px;
     margin-bottom: -5px;
     cursor: pointer;
+}
+
+.title:hover {
+    color: green;
 }
 
 .wrapper1 {

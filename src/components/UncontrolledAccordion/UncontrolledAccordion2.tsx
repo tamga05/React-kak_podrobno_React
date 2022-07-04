@@ -21,7 +21,7 @@ function UncontrolledAccordion2(props: UncontrolledAccordionPropsType) {
 
     return (
         <div className={s.wrapper}>
-            <h4 className={s.title}>8. callback, onClick at UncontrolledAccordion2 component</h4>
+            <h4>8. callback, onClick at UncontrolledAccordion2 component</h4>
             <AccordionTitle titleValueNext={props.titleValue} onClick={onClickToggle}/>
             {!collapsed && <AccordionBody/>}
         </div>
