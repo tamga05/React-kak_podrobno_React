@@ -5,7 +5,8 @@ import s from '../UncontrolledRating/UncontrolledRating2.module.css';
 export function UncontrolledRating2() {
 
     const resetStyle = {
-        marginLeft: '15px'
+        marginLeft: '15px',
+        cursor: 'pointer'
     }
 
 
@@ -44,5 +45,5 @@ type StarPropsType = {
 function Star(props: StarPropsType) {
     return <span onClick={() => {
         props.setValue(props.value)
-    }}>{props.selected ? <b>star</b> : 'star'}</span>
+    }} className={s.star}>{props.selected ? <b>star</b> : 'star'}</span>
 }

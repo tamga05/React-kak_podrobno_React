@@ -13,6 +13,10 @@
     margin: 10px 0;
 }
 
+.star {
+    cursor: pointer;
+}
+
 .wrapperMain {
     margin-top: 20px;
 }
