@@ -8,7 +8,7 @@ export type Accordion2ValueType = boolean
 type AccordionPropsType = {
     titleValue: string
     value: Accordion2ValueType
-    onClick: (value: Accordion2ValueType) => void
+    onClick: () => void
 }
 
 
@@ -30,13 +30,11 @@ function Accordion2(props: AccordionPropsType) {
 type AccordionTitlePropsType = {
     titleValueNext: string
     value: Accordion2ValueType
-    onClick: (value: Accordion2ValueType) => void
+    onClick: () => void
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    return <h3 onClick={() => {
-        props.onClick(!props.value)
-    }}>{props.titleValueNext}</h3>
+    return <h3 onClick={props.onClick}>{props.titleValueNext}</h3>
 }
 
 
