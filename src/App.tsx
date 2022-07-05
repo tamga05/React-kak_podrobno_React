@@ -60,7 +60,7 @@ function App() {
                 <UncontrolledRating3/>
                 <Accordion2 titleValue={'Menu'} value={collapsed} onClick={() => setCollapsed(!collapsed)}/>
 
-                <OnOffUncontrolled tumbler={tumbler} onClick={() => setTumbler(!tumbler)}/>
+                <OnOffUncontrolled tumbler={tumbler} onClick={(value) => setTumbler(value)}/>
             </div>
         </div>
     )

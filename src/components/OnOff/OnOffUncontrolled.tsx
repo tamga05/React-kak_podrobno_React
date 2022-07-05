@@ -4,7 +4,7 @@ import s from './OnOffWithoutUseState.module.css';
 
 type OnOffPropsType = {
     tumbler: boolean
-    onClick: () => void
+    onClick: (value: boolean) => void
 }
 
 
@@ -59,11 +59,11 @@ export function OnOffUncontrolled(props: OnOffPropsType) {
             {
                 <div className={s.wrapper}>
 
-                    <div style={onStyle} onClick={props.onClick}>ON</div>
+                    <div style={onStyle} onClick={() => props.onClick(true)}>ON</div>
 
-                    <div style={offStyle} onClick={props.onClick}>OFF</div>
+                    <div style={offStyle} onClick={() => props.onClick(false)}>OFF</div>
 
-                    <div style={lampStyle}></div>
+                    <div style={lampStyle}/>
 
                 </div>
             }
