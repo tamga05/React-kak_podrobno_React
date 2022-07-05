@@ -50,23 +50,28 @@ export function OnOffUncontrolled(props: OnOffPropsType) {
         boxShadow: props.tumbler ? '0 0 20px 3px #008000' : '0 0 20px 3px #FF0000'
     }
 
+    const On = () => {
+        props.onClick(true)
+    }
+
+    const Off = () => {
+        props.onClick(false)
+    }
+
 
     return (
         <div className={s.wrapperMain}>
             <h3 className={s.titleMain}>12. callback, onClick OnOff<span className={s.span}> Uncontrolled</span> component</h3>
 
+            <div className={s.wrapper}>
 
-            {
-                <div className={s.wrapper}>
+                <div style={onStyle} onClick={On}>ON</div>
 
-                    <div style={onStyle} onClick={() => props.onClick(true)}>ON</div>
+                <div style={offStyle} onClick={Off}>OFF</div>
 
-                    <div style={offStyle} onClick={() => props.onClick(false)}>OFF</div>
+                <div style={lampStyle}/>
 
-                    <div style={lampStyle}/>
-
-                </div>
-            }
+            </div>
         </div>
     )
 }

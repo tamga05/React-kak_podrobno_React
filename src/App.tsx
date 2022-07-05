@@ -10,8 +10,8 @@ import {UncontrolledRating2} from './components/UncontrolledRating/UncontrolledR
 import UncontrolledAccordion2 from './components/UncontrolledAccordion/UncontrolledAccordion2';
 import {Rating2, RatingValueType} from './components/Rating/Rating2';
 import {UncontrolledRating3} from './components/UncontrolledRating/UncontrolledRating3';
-import Accordion2 from './components/Accordion/Accordion2';
 import {OnOffUncontrolled} from './components/OnOff/OnOffUncontrolled';
+import AccordionUncontrolled from './components/Accordion/AccordionUncontrolled';
 
 
 function App() {
@@ -26,6 +26,13 @@ function App() {
     let [collapsed, setCollapsed] = useState<boolean>(false)
 
     let [tumbler, setTumbler] = useState<boolean>(false)
+
+    const string = {
+        fontSize: '24px',
+        fontWeight: '700',
+        marginBottom: '20px',
+        color: tumbler ? 'green' : 'red'
+    }
 
 
     return (
@@ -58,9 +65,9 @@ function App() {
                 <UncontrolledAccordion2 titleValue={'Menu'}/>
                 <Rating2 value={rating2Value} onClick={setRating2Value}/>
                 <UncontrolledRating3/>
-                <Accordion2 titleValue={'Menu'} value={collapsed} onClick={() => setCollapsed(!collapsed)}/>
-
-                <OnOffUncontrolled tumbler={tumbler} onClick={(value) => setTumbler(value)}/>
+                <AccordionUncontrolled titleValue={'Menu'} value={collapsed} onClick={() => setCollapsed(!collapsed)}/>
+                <OnOffUncontrolled tumbler={tumbler} onClick={setTumbler}/>
+                <div style={string}>{tumbler.toString()}</div>
             </div>
         </div>
     )

@@ -15,7 +15,7 @@ export function Rating2(props: RatingPropsType) {
 
     return (
         <div>
-            <h4>9. callback, onClick at Rating2 component</h4>
+            <h4>9. callback, onClick at Rating2 Uncontrolled component</h4>
             <div className={s.wrapper}>
                 <Star selected={props.value >= 1} onClick={props.onClick} value={1}/>
                 <Star selected={props.value >= 2} onClick={props.onClick} value={2}/>

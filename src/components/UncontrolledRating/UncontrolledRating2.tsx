@@ -15,7 +15,7 @@ export function UncontrolledRating2() {
 
     return (
         <div className={s.wrapper}>
-            <h4>7. callback, onClick at UncontrolledRating2 component</h4>
+            <h4>7. callback, onClick at Rating Uncontrolled component</h4>
 
             <div className={s.starBlock}>
                 <Star selected={value >= 1} setValue={setValue} value={1}/>

@@ -12,12 +12,12 @@ type AccordionPropsType = {
 }
 
 
-function Accordion2(props: AccordionPropsType) {
+function AccordionUncontrolled(props: AccordionPropsType) {
 
 
     return (
         <div className={s.wrapper}>
-            <h4>11. callback, onClick at Accordion2 component</h4>
+            <h4>11. callback, onClick at Accordion2 Uncontrolled component</h4>
             <div className={s.main}>
                 <AccordionTitle titleValueNext={props.titleValue} onClick={props.onClick} value={props.value}/>
                 {props.value && <AccordionBody/>}
@@ -48,5 +48,4 @@ function AccordionBody() {
     );
 }
 
-
-export default Accordion2;
+export default AccordionUncontrolled;
