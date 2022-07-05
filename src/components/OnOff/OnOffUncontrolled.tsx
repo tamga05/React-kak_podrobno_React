@@ -3,35 +3,68 @@ import s from './OnOffWithoutUseState.module.css';
 
 
 type OnOffPropsType = {
-    switchOnOff: boolean
-    // off?: boolean
+    tumbler: boolean
+    onClick: () => void
 }
 
 
 export function OnOffUncontrolled(props: OnOffPropsType) {
 
+    const onStyle = {
+        width: '80px',
+        height: '50px',
+        border: props.tumbler ? '1px solid black' : '2px solid black',
+        marginRight: '10px',
+        fontWeight: 'bold',
+        borderRadius: '5px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        color: props.tumbler ? 'white' : 'black',
+        backgroundColor: props.tumbler ? 'green' : 'white'
+    }
+
+    const offStyle = {
+        width: '80px',
+        height: '50px',
+        border: props.tumbler ? '2px solid black' : '1px solid black',
+        marginRight: '10px',
+        fontWeight: 'bold',
+        borderRadius: '5px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        color: props.tumbler ? 'black' : 'white',
+        backgroundColor: props.tumbler ? 'white' : 'red'
+    }
+
+    const lampStyle = {
+        width: '50px',
+        height: '50px',
+        border: 'none',
+        borderRadius: '50%',
+        marginLeft: '15px',
+        backgroundColor: props.tumbler ? 'green' : 'red',
+        boxShadow: props.tumbler ? '0 0 20px 3px #008000' : '0 0 20px 3px #FF0000'
+    }
+
 
     return (
-        <div className={s.wrapper12}>
-            <h3 className={s.title12}>12. callback, onClick OnOff<span className={s.span}> Uncontrolled</span> component</h3>
+        <div className={s.wrapperMain}>
+            <h3 className={s.titleMain}>12. callback, onClick OnOff<span className={s.span}> Uncontrolled</span> component</h3>
+
+
             {
-                // props.off
-                //     ? <div className={s.wrapper}>
-                //         <button className={s.buttonOn}>ON</button>
-                //         <button className={s.buttonOff}>OFF</button>
-                //         <div className={s.lamp}></div>
-                //     </div>
-                //     :
-
                 <div className={s.wrapper}>
-                    {props.switchOnOff ? <div className={`${s.buttonOn} ${s.buttonOnSwitch}`}>ON</div> : <div className={s.buttonOn}>ON</div>}
 
+                    <div style={onStyle} onClick={props.onClick}>ON</div>
 
-                    {props.switchOnOff ? <div className={s.buttonOff}>OFF</div> : <div className={`${s.buttonOff} ${s.buttonOffSwitch}`}>OFF</div>}
+                    <div style={offStyle} onClick={props.onClick}>OFF</div>
 
+                    <div style={lampStyle}></div>
 
-                    {props.switchOnOff ? <div className={`{${s.lamp} ${s.lampOnSwitch}`}></div> :
-                        <div className={`${s.lamp} ${s.lampOffSwitch}`}></div>}
                 </div>
             }
         </div>

@@ -23,9 +23,9 @@ function App() {
 
     let [rating2Value, setRating2Value] = useState<RatingValueType>(0)
 
-    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [collapsed, setCollapsed] = useState<boolean>(false)
 
-    let [switchOnOff, setSwitchOnOff] = useState<boolean>(true)
+    let [tumbler, setTumbler] = useState<boolean>(false)
 
 
     return (
@@ -58,8 +58,9 @@ function App() {
                 <UncontrolledAccordion2 titleValue={'Menu'}/>
                 <Rating2 value={rating2Value} onClick={setRating2Value}/>
                 <UncontrolledRating3/>
-                <Accordion2 titleValue={'Menu'} value={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>
-                <OnOffUncontrolled switchOnOff={switchOnOff}/>
+                <Accordion2 titleValue={'Menu'} value={collapsed} onClick={() => setCollapsed(!collapsed)}/>
+
+                <OnOffUncontrolled tumbler={tumbler} onClick={() => setTumbler(!tumbler)}/>
             </div>
         </div>
     )
